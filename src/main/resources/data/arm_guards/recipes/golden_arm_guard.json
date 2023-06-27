@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "X": {
+      "tag": "c:gold_ingots"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "#S#"
+  ],
+  "result": {
+    "item": "arm_guards:golden_arm_guard"
+  },
+  "show_notification": true
+}

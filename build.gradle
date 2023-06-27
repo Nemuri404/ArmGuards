@@ -1,0 +1,97 @@
+plugins {
+	alias libs.plugins.quilt.loom
+	id "com.modrinth.minotaur" version "2.+"
+}
+
+base.archivesName = project.archives_base_name
+version = "${project.version}+${libs.versions.minecraft.get()}"
+group = project.maven_group
+
+repositories {
+	maven {
+		name = "TerraformersMC"
+		url = "https://maven.terraformersmc.com/"
+	}
+	maven {
+		name = "Ladysnake Libs"
+		url = "https://ladysnake.jfrog.io/artifactory/mods"
+	}
+	maven { url = "https://jitpack.io" }
+	maven { url = "https://maven.isxander.dev/releases" }
+
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
+}
+
+dependencies {
+	minecraft libs.minecraft
+	mappings variantOf(libs.quilt.mappings) { classifier 'intermediary-v2' }
+
+	modImplementation libs.quilt.loader
+	modImplementation libs.quilted.fabric.api
+
+	modCompileOnly libs.mod.menu
+	modRuntimeOnly libs.mod.menu
+
+	modImplementation libs.trinkets
+
+	modCompileOnly libs.mod.menu
+	modRuntimeOnly libs.mod.menu
+
+	modImplementation libs.cardinal.components.base
+
+	modImplementation libs.yet.another.config.lib
+}
+
+
+loom {
+	accessWidenerPath = file("src/main/resources/arm_guards.accesswidener")
+}
+
+processResources {
+	inputs.property 'version', version
+
+	filesMatching('quilt.mod.json') {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = 'UTF-8'
+	it.options.release = 17
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+
+	withSourcesJar()
+}
+
+modrinth {
+	token = "${modrinth_token}" // This is the default. Remember to have the MODRINTH_TOKEN environment variable set or else this will fail, or set it to whatever you want - just make sure it stays private!
+	projectId = "HcPQomcd" // This can be the project ID or the slug. Either will work!
+	versionName = "Arm Guards ${project.version} for ${libs.versions.minecraft.get()}"
+	versionNumber = "${project.version}"
+	versionType = "release" // This is the default -- can also be `beta` or `alpha`
+	uploadFile = remapJar // With Loom, this MUST be set to `remapJar` instead of `jar`!
+	gameVersions = ["1.20.1"] // Must be an array, even with only one version
+	loaders = ["quilt"] // Must also be an array - no need to specify this if you're using Loom or ForgeGradle
+	dependencies { // A special DSL for creating dependencies
+		// scope.type
+		// The scope can be `required`, `optional`, `incompatible`, or `embedded`
+		// The type can either be `project` or `version`
+		required.project "qsl" // Creates a new required dependency on Fabric API
+		required.project "trinkets" // Creates a new required dependency on Fabric API
+		//required.project "yacl" // Creates a new required dependency on Fabric API
+	}
+}

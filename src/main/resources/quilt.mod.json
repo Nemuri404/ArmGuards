@@ -1,0 +1,47 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "moe.nemuri",
+		"id": "arm_guards",
+		"version": "${version}",
+		"metadata": {
+			"name": "Arm Guards",
+			"description": "This mod adds Arm Guards inspired by the Piglin Brute!",
+			"contributors": {
+				"Nemuri": "Owner"
+			},
+			"contact": {
+				"homepage": "https://modrinth.com/mod/armguards",
+				"issues": "https://github.com/Nemuri404/ArmGuards/issues",
+				"sources": "https://github.com/Nemuri404/ArmGuards"
+			},
+			"icon": "assets/arm_guards/icon.png",
+			"license": "MIT"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "moe.nemuri.armguards.ArmGuards",
+			"client_init": "moe.nemuri.armguards.client.ArmGuardsClient"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.19.1"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=7.0.4-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.20.1"
+			},
+			{
+				"id": "trinkets",
+				"versions": ">=3.7.0"
+			}
+		]
+	},
+	"mixin": "arm_guards.mixins.json",
+	"access_widener": "arm_guards.accesswidener"
+}

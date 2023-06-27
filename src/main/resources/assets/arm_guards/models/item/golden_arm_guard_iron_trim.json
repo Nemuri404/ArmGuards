@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "arm_guards:item/golden_arm_guard",
+    "layer1": "arm_guards:trims/items/arm_guard_trim_iron"
+  }
+}

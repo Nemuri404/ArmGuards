@@ -1,0 +1,28 @@
+[versions]
+# The latest versions are available at https://lambdaurora.dev/tools/import_quilt.html
+minecraft = "1.20.1"
+quilt_mappings = "1.20.1+build.5"
+quilt_loader = "0.19.1"
+
+quilted_fabric_api = "7.0.4+0.84.0-1.20.1"
+
+mod_menu = "7.1.0"
+trinkets = "3.7.0"
+cardinal_components = "5.2.1"
+yacl = "3.0.2+1.20"
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+quilt_mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "quilt_mappings" }
+quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "quilt_loader" }
+
+quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api", version.ref = "quilted_fabric_api" }
+
+mod_menu = { module = "com.terraformersmc:modmenu", version.ref = "mod_menu" }
+trinkets = { module = "dev.emi:trinkets", version.ref = "trinkets" }
+cardinal_components_base = { module = "dev.onyxstudios.cardinal-components-api:cardinal-components-base", version.ref = "cardinal_components" }
+
+yet_another_config_lib = { module = "dev.isxander.yacl:yet-another-config-lib-fabric", version.ref = "yacl" }
+
+[plugins]
+quilt_loom = { id = "org.quiltmc.loom", version = "1.2.+" }
