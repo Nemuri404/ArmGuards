@@ -31,9 +31,6 @@ dependencies {
 
 	modImplementation libs.trinkets
 
-	modCompileOnly libs.mod.menu
-	modRuntimeOnly libs.mod.menu
-
 	modImplementation libs.cardinal.components.base
 
 	modImplementation libs.yet.another.config.lib

@@ -3,15 +3,9 @@
     {
       "type": "paletted_permutations",
       "textures": [
-        "arm_guards:trims/models/arm_guard/celeste",
-        "arm_guards:trims/models/arm_guard/heart",
-        "arm_guards:trims/models/arm_guard/myth",
-        "arm_guards:trims/models/arm_guard/ram",
-        "arm_guards:trims/models/arm_guard/coast",
-        "arm_guards:trims/models/arm_guard/storm",
-        "arm_guards:trims/models/arm_guard/wrap",
         "arm_guards:trims/models/arm_guard/sentry",
         "arm_guards:trims/models/arm_guard/dune",
+        "arm_guards:trims/models/arm_guard/coast",
         "arm_guards:trims/models/arm_guard/wild",
         "arm_guards:trims/models/arm_guard/ward",
         "arm_guards:trims/models/arm_guard/eye",
@@ -42,9 +36,8 @@
         "gold_darker": "trims/color_palettes/gold_darker",
         "diamond_darker": "trims/color_palettes/diamond_darker",
         "netherite_darker": "trims/color_palettes/netherite_darker",
-        "wrappist": "geode_plus:trims/color_palettes/wrappist",
-        "celestite": "geode_plus:trims/color_palettes/celestite",
-        "pink_topaz": "geode_plus:trims/color_palettes/pink_topaz"
+        "copper_darker": "arm_guards:trims/color_palettes/copper_darker",
+        "amethyst_darker": "arm_guards:trims/color_palettes/amethyst_darker"
       }
     }
   ]

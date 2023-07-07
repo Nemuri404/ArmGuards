@@ -21,9 +21,8 @@
         "gold_darker": "trims/color_palettes/gold_darker",
         "diamond_darker": "trims/color_palettes/diamond_darker",
         "netherite_darker": "trims/color_palettes/netherite_darker",
-        "wrappist": "geode_plus:trims/color_palettes/wrappist",
-        "celestite": "geode_plus:trims/color_palettes/celestite",
-        "pink_topaz": "geode_plus:trims/color_palettes/pink_topaz"
+        "copper_darker": "arm_guards:trims/color_palettes/copper_darker",
+        "amethyst_darker": "arm_guards:trims/color_palettes/amethyst_darker"
       }
     }
   ]

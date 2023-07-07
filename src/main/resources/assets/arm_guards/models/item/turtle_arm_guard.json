@@ -44,7 +44,7 @@
       }
     },
     {
-      "model": "arm_guards:item/turtle_arm_guard_turtle_darker_trim",
+      "model": "arm_guards:item/turtle_arm_guard_diamond_trim",
       "predicate": {
         "trim_type": 0.8
       }

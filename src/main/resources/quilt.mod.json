@@ -6,12 +6,12 @@
 		"version": "${version}",
 		"metadata": {
 			"name": "Arm Guards",
-			"description": "This mod adds Arm Guards inspired by the Piglin Brute!",
+			"description": "Adds Arm Guards to Minecraft inspired by the Piglin Brute!",
 			"contributors": {
 				"Nemuri": "Owner"
 			},
 			"contact": {
-				"homepage": "https://modrinth.com/mod/armguards",
+				"homepage": "https://modrinth.com/mod/arm-guards",
 				"issues": "https://github.com/Nemuri404/ArmGuards/issues",
 				"sources": "https://github.com/Nemuri404/ArmGuards"
 			},
@@ -26,15 +26,15 @@
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.19.1"
+				"versions": ">=0.19.2"
 			},
 			{
 				"id": "quilted_fabric_api",
-				"versions": ">=7.0.4-"
+				"versions": ">=7.0.5"
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.20.1"
+				"versions": ">=1.20"
 			},
 			{
 				"id": "trinkets",

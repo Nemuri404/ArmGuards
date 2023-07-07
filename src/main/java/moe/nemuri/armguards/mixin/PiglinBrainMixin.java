@@ -2,7 +2,6 @@ package moe.nemuri.armguards.mixin;
 
 import moe.nemuri.armguards.item.AGItems;
 import moe.nemuri.armguards.util.AGUtil;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PiglinBrain;
 import org.spongepowered.asm.mixin.Mixin;

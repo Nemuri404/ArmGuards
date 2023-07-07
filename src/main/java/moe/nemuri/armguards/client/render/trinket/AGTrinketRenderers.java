@@ -18,6 +18,7 @@ public class AGTrinketRenderers implements SimpleSynchronousResourceReloader {
 		TrinketRendererRegistry.registerRenderer(AGItems.IRON_ARM_GUARD, new ArmGuardTrinketRenderer());
 		TrinketRendererRegistry.registerRenderer(AGItems.DIAMOND_ARM_GUARD, new ArmGuardTrinketRenderer());
 		TrinketRendererRegistry.registerRenderer(AGItems.NETHERITE_ARM_GUARD, new ArmGuardTrinketRenderer());
+		TrinketRendererRegistry.registerRenderer(AGItems.AMETHYST_ARM_GUARD, new ArmGuardTrinketRenderer());
 		TrinketRendererRegistry.registerRenderer(AGItems.COPPER_ARM_GUARD, new ArmGuardTrinketRenderer());
 		TrinketRendererRegistry.registerRenderer(AGItems.TURTLE_ARM_GUARD, new ArmGuardTrinketRenderer());
 	}

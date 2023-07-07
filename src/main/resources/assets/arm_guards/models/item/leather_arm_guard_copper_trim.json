@@ -2,7 +2,7 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "arm_guards:item/leather_arm_guard",
-    "layer1": "arm_guards:trims/items/arm_guard_trim_copper",
-    "layer2": "arm_guards:item/leather_arm_guard_overlay"
+    "layer1": "arm_guards:item/leather_arm_guard_overlay",
+    "layer2": "arm_guards:trims/items/arm_guard_trim_copper"
   }
 }
