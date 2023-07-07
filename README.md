@@ -1,6 +1,6 @@
 <div>
 <h1>Arm Guards</h1>
-<h3>This mod adds Arm Guards inspired by the Piglin Brute!</h3>
+<h3>Adds Arm Guards to Minecraft inspired by the Piglin Brute!</h3>
 
 <a href="https://quiltmc.org/en/install" rel="noopener nofollow ugc"><img src="https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/supported/quilt_vector.svg" alt="quilt"></a>
 <img src="https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/unsupported/fabric_vector.svg" alt="fabric">
