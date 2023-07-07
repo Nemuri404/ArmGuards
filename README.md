@@ -6,7 +6,7 @@
 <img src="https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/unsupported/fabric_vector.svg" alt="fabric">
 <img src="https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/cozy/unsupported/forge_vector.svg" alt="forge">
 
-<a href="https://modrinth.com/mod/armguards" rel="noopener nofollow ugc"><img src="https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/compact/available/modrinth_vector.svg" alt="modrinth"></a>
+<a href="https://modrinth.com/mod/arm-guards" rel="noopener nofollow ugc"><img src="https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/compact/available/modrinth_vector.svg" alt="modrinth"></a>
 <a href="https://modrinth.com/mod/qsl" rel="noopener nofollow ugc"><img src="https://raw.githubusercontent.com/intergrav/devins-badges/v3/assets/compact/requires/quilt-standard-libraries_vector.svg" alt="qsl"></a>
 </div>
 <h2>Features</h2>
