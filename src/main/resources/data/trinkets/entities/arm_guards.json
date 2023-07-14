@@ -1,6 +1,7 @@
 {
   "entities": [
-    "player"
+    "player",
+    "armor_stand"
   ],
   "slots": [
     "offhand/glove"
