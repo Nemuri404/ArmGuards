@@ -2,14 +2,13 @@ package moe.nemuri.armguards.item;
 
 import com.google.common.collect.Multimap;
 import dev.emi.trinkets.api.SlotReference;
-import net.minecraft.entity.Entity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.world.World;
 
 import java.util.UUID;
 
@@ -49,21 +48,17 @@ public class ChargeableArmGuardItem extends ArmGuardItem {
 
 	@Override
 	public void tick(ItemStack stack, SlotReference slot, LivingEntity entity) {
-		this.updateCharge(stack);
+		this.updateCharge(stack, entity);
 	}
 
-	@Override
-	public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-		this.updateCharge(stack);
-	}
-
-	private void updateCharge(ItemStack stack) {
+	private void updateCharge(ItemStack stack, LivingEntity entity) {
 		NbtCompound nbt = stack.getNbt();
 		if (nbt != null) {
 			if (nbt.getInt(CHARGE_TIMER_KEY) > 0) {
 				nbt.putInt(CHARGE_TIMER_KEY, nbt.getInt(CHARGE_TIMER_KEY) - 1);
 			} else {
 				setCharged(stack, false);
+				stack.damage(20, entity, player -> player.sendEquipmentBreakStatus(EquipmentSlot.OFFHAND));
 			}
 		}
 	}

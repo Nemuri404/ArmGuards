@@ -9,8 +9,7 @@
     "PiglinBrainMixin",
     "PlayerEntityMixin",
     "PlayerInventoryMixin",
-    "SmithingTemplateItemMixin",
-    "UnbreakingEnchantmentMixin"
+    "SmithingTemplateItemMixin"
   ],
   "client": [
     "BufferBuilderStorageMixin",

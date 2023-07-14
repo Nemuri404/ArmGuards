@@ -14,12 +14,12 @@ public class ConductionEnchantment extends Enchantment {
 
 	@Override
 	public int getMinPower(int level) {
-		return 25;
+		return level * 25;
 	}
 
 	@Override
 	public int getMaxPower(int level) {
-		return 50;
+		return this.getMinPower(level) + 50;
 	}
 
 	@Override

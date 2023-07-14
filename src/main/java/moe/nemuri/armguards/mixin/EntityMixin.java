@@ -20,19 +20,13 @@ public abstract class EntityMixin {
 		if (entity instanceof LivingEntity livingEntity) {
 			if (AGUtil.hasArmGuard(livingEntity)) {
 				ItemStack stack = AGUtil.getArmGuard(livingEntity);
-				if (AGUtil.isChargeable(stack, livingEntity)) {
-					ChargeableArmGuardItem.setCharged(stack, true);
-				}
+				AGUtil.chargeArmGuard(stack, livingEntity);
 			} else if (livingEntity.getMainHandStack().getItem() instanceof ChargeableArmGuardItem) {
 				ItemStack stack = livingEntity.getMainHandStack();
-				if (AGUtil.isChargeable(stack, livingEntity)) {
-					ChargeableArmGuardItem.setCharged(stack, true);
-				}
+				AGUtil.chargeArmGuard(stack, livingEntity);
 			} else if (livingEntity.getOffHandStack().getItem() instanceof ChargeableArmGuardItem) {
 				ItemStack stack = livingEntity.getOffHandStack();
-				if (AGUtil.isChargeable(stack, livingEntity)) {
-					ChargeableArmGuardItem.setCharged(stack, true);
-				}
+				AGUtil.chargeArmGuard(stack, livingEntity);
 			}
 		} else {
 			ci.cancel();

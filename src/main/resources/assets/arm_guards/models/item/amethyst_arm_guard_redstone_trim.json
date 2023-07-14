@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "arm_guards:item/turtle_arm_guard",
-    "layer1": "arm_guards:trims/items/arm_guard_trim_redstone"
-  }
-}

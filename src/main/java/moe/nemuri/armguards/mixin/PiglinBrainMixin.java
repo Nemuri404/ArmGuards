@@ -13,10 +13,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class PiglinBrainMixin {
 	@Inject(method = "wearsGoldArmor", at = @At("RETURN"), cancellable = true)
 	private static void armGuards$wearsGoldArmor(LivingEntity entity, CallbackInfoReturnable<Boolean> cir) {
-		if (AGUtil.hasArmGuard(entity)) {
-			if (AGUtil.getArmGuard(entity).isOf(AGItems.GOLDEN_ARM_GUARD)) {
-				cir.setReturnValue(true);
-			}
+		if (AGUtil.getArmGuard(entity).isOf(AGItems.GOLDEN_ARM_GUARD)) {
+			cir.setReturnValue(true);
 		}
 	}
 }

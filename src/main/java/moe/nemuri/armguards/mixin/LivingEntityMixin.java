@@ -35,8 +35,6 @@ public abstract class LivingEntityMixin extends Entity {
 	private void armGuards$blockedByShield(DamageSource source, CallbackInfoReturnable<Boolean> cir) {
 		if (!this.isBlocking() && this.shouldDeflectProjectile(source)) {
 			cir.setReturnValue(true);
-		} else {
-			cir.cancel();
 		}
 	}
 

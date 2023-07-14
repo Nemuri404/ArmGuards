@@ -12,13 +12,12 @@ import java.util.function.Supplier;
 
 public enum ArmGuardMaterials implements StringIdentifiable, ArmGuardMaterial {
 	LEATHER("leather", 5, 1, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, () -> Ingredient.ofItems(Items.LEATHER)),
-	AMETHYST("amethyst", 10, 1, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0f, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
-	COPPER("copper", 15, 1, 9, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.COPPER_INGOTS)),
+	COPPER("copper", 15, 2, 9, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.COPPER_INGOTS)),
 	IRON("iron", 15, 2, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.IRON_INGOTS)),
 	GOLD("gold", 7, 2, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.GOLD_INGOTS)),
-	DIAMOND("diamond", 33, 3, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, () -> Ingredient.ofTag(ConventionalItemTags.DIAMONDS)),
-	TURTLE("turtle", 25, 2, 9, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 1.0f, () -> Ingredient.ofItems(Items.SCUTE)),
-	NETHERITE("netherite", 37, 3, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0f, () -> Ingredient.ofTag(ConventionalItemTags.NETHERITE_INGOTS));
+	DIAMOND("diamond", 33, 3, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0f, () -> Ingredient.ofTag(ConventionalItemTags.DIAMONDS)),
+	TURTLE("turtle", 25, 2, 9, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 3.0f, () -> Ingredient.ofItems(Items.SCUTE)),
+	NETHERITE("netherite", 37, 3, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0f, () -> Ingredient.ofTag(ConventionalItemTags.NETHERITE_INGOTS));
 
 	private final String name;
 	private final int durabilityMultiplier;
