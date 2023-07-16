@@ -7,5 +7,12 @@
   "item.arm_guards.iron_arm_guard": "Iron Arm Guard",
   "item.arm_guards.leather_arm_guard": "Leather Arm Guard",
   "item.arm_guards.netherite_arm_guard": "Netherite Arm Guard",
-  "item.arm_guards.turtle_arm_guard": "Turtle Shell Arm Guard"
+  "item.arm_guards.turtle_arm_guard": "Turtle Shell Arm Guard",
+  "subtitles.item.arm_guard.equip_copper": "Copper arm guard jingles",
+  "subtitles.item.arm_guard.equip_diamond": "Diamond arm guard clangs",
+  "subtitles.item.arm_guard.equip_gold": "Gold arm guard clinks",
+  "subtitles.item.arm_guard.equip_iron": "Iron arm guard clanks",
+  "subtitles.item.arm_guard.equip_leather": "Leather arm guard rustles",
+  "subtitles.item.arm_guard.equip_netherite": "Netherite arm guard clanks",
+  "subtitles.item.arm_guard.equip_turtle": "Turtle Shell arm guard thunks"
 }

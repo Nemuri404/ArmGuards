@@ -1,15 +1,10 @@
 package moe.nemuri.armguards.enchantment;
 
-import moe.nemuri.armguards.item.ArmGuardItem;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.random.RandomGenerator;
 
-public class DeflectEnchantment extends Enchantment {
-	protected DeflectEnchantment(Rarity weight, EquipmentSlot... slots) {
-		super(weight, EnchantmentTarget.VANISHABLE, slots);
+public class DeflectEnchantment extends ArmGuardEnchantment {
+	protected DeflectEnchantment(Rarity weight) {
+		super(weight);
 	}
 
 	@Override
@@ -25,11 +20,6 @@ public class DeflectEnchantment extends Enchantment {
 	@Override
 	public int getMaxLevel() {
 		return 3;
-	}
-
-	@Override
-	public boolean isAcceptableItem(ItemStack stack) {
-		return stack.getItem() instanceof ArmGuardItem;
 	}
 
 	public static boolean shouldDeflectProjectile(int level, RandomGenerator random) {

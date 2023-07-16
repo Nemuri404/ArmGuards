@@ -1,15 +1,12 @@
 package moe.nemuri.armguards.enchantment;
 
 import moe.nemuri.armguards.item.ChargeableArmGuardItem;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.random.RandomGenerator;
 
-public class ConductionEnchantment extends Enchantment {
-	protected ConductionEnchantment(Rarity weight, EquipmentSlot... slots) {
-		super(weight, EnchantmentTarget.VANISHABLE, slots);
+public class ConductionEnchantment extends ArmGuardEnchantment {
+	protected ConductionEnchantment(Rarity weight) {
+		super(weight);
 	}
 
 	@Override

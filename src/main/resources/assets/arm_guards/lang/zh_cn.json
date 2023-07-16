@@ -7,5 +7,12 @@
   "item.arm_guards.iron_arm_guard": "铁护臂",
   "item.arm_guards.leather_arm_guard": "皮革护臂",
   "item.arm_guards.netherite_arm_guard": "下界合金护臂",
-  "item.arm_guards.turtle_arm_guard": "海龟壳护臂"
+  "item.arm_guards.turtle_arm_guard": "海龟壳护臂",
+  "subtitles.item.arm_guard.equip_copper": "Copper arm guard jingles",
+  "subtitles.item.arm_guard.equip_diamond": "Diamond arm guard clangs",
+  "subtitles.item.arm_guard.equip_gold": "Gold arm guard clinks",
+  "subtitles.item.arm_guard.equip_iron": "Iron arm guard clanks",
+  "subtitles.item.arm_guard.equip_leather": "Leather arm guard rustles",
+  "subtitles.item.arm_guard.equip_netherite": "Netherite arm guard clanks",
+  "subtitles.item.arm_guard.equip_turtle": "Turtle Shell arm guard thunks"
 }

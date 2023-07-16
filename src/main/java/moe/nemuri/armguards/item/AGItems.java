@@ -1,6 +1,7 @@
 package moe.nemuri.armguards.item;
 
 import moe.nemuri.armguards.ArmGuards;
+import moe.nemuri.armguards.util.ArmGuardMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;

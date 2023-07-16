@@ -1,23 +1,23 @@
-package moe.nemuri.armguards.item;
+package moe.nemuri.armguards.util;
 
+import moe.nemuri.armguards.sound.AGSoundEvents;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Lazy;
 import net.minecraft.util.StringIdentifiable;
 
 import java.util.function.Supplier;
 
 public enum ArmGuardMaterials implements StringIdentifiable, ArmGuardMaterial {
-	LEATHER("leather", 5, 1, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, () -> Ingredient.ofItems(Items.LEATHER)),
-	COPPER("copper", 15, 2, 9, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.COPPER_INGOTS)),
-	IRON("iron", 15, 2, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.IRON_INGOTS)),
-	GOLD("gold", 7, 2, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.GOLD_INGOTS)),
-	DIAMOND("diamond", 33, 3, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0f, () -> Ingredient.ofTag(ConventionalItemTags.DIAMONDS)),
-	TURTLE("turtle", 25, 2, 9, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 3.0f, () -> Ingredient.ofItems(Items.SCUTE)),
-	NETHERITE("netherite", 37, 3, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0f, () -> Ingredient.ofTag(ConventionalItemTags.NETHERITE_INGOTS));
+	LEATHER("leather", 5, 1, 15, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_LEATHER, 0.0f, () -> Ingredient.ofItems(Items.LEATHER)),
+	COPPER("copper", 15, 2, 9, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_COPPER, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.COPPER_INGOTS)),
+	IRON("iron", 15, 2, 9, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_IRON, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.IRON_INGOTS)),
+	GOLD("gold", 7, 2, 25, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_GOLD, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.GOLD_INGOTS)),
+	DIAMOND("diamond", 33, 3, 10, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_DIAMOND, 1.0f, () -> Ingredient.ofTag(ConventionalItemTags.DIAMONDS)),
+	TURTLE("turtle", 25, 2, 9, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_TURTLE, 3.0f, () -> Ingredient.ofItems(Items.SCUTE)),
+	NETHERITE("netherite", 37, 3, 15, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_NETHERITE, 2.0f, () -> Ingredient.ofTag(ConventionalItemTags.NETHERITE_INGOTS));
 
 	private final String name;
 	private final int durabilityMultiplier;

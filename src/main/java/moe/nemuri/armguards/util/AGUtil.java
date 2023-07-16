@@ -1,7 +1,5 @@
 package moe.nemuri.armguards.util;
 
-import dev.emi.trinkets.TrinketSlot;
-import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketInventory;
 import dev.emi.trinkets.api.TrinketsApi;
@@ -13,8 +11,6 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.world.event.GameEvent;
 
 public class AGUtil {
 	public static boolean hasArmGuard(LivingEntity entity) {

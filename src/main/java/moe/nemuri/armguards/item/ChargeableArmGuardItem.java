@@ -2,6 +2,7 @@ package moe.nemuri.armguards.item;
 
 import com.google.common.collect.Multimap;
 import dev.emi.trinkets.api.SlotReference;
+import moe.nemuri.armguards.util.ArmGuardMaterial;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;

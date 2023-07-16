@@ -1,4 +1,4 @@
-package moe.nemuri.armguards.item;
+package moe.nemuri.armguards.util;
 
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;

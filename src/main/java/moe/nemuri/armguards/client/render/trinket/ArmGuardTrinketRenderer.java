@@ -44,6 +44,7 @@ public class ArmGuardTrinketRenderer implements TrinketRenderer {
 			this.setupTransforms(entity, limbAngle, limbDistance, tickDelta, animationProgress, headYaw, headPitch, this.getModel());
 			this.setVisible(this.getModel(), slot.inventory().getSlotType().getGroup().equals("offhand") ? entity.getMainArm().getOpposite() : entity.getMainArm());
 
+
 			if (item instanceof DyeableArmGuardItem) {
 				int i = ((DyeableArmGuardItem) item).getColor(stack);
 				float r = (float) (i >> 16 & 0xFF) / 255.0F;

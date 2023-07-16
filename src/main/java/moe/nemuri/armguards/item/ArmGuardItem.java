@@ -3,6 +3,7 @@ package moe.nemuri.armguards.item;
 import com.google.common.collect.Multimap;
 import dev.emi.trinkets.TrinketSlot;
 import dev.emi.trinkets.api.*;
+import moe.nemuri.armguards.util.ArmGuardMaterial;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.DispenserBehavior;
 import net.minecraft.block.dispenser.ItemDispenserBehavior;
