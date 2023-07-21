@@ -42,6 +42,12 @@
 			}
 		]
 	},
+	"modmenu": {
+		"links": {
+			"modmenu.kofi": "https://ko-fi.com/nemuri404",
+			"modmenu.wiki": "https://github.com/Nemuri404/ArmGuards/wiki"
+		}
+	},
 	"mixin": "arm_guards.mixins.json",
 	"access_widener": "arm_guards.accesswidener"
 }

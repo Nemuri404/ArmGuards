@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public enum ArmGuardMaterials implements StringIdentifiable, ArmGuardMaterial {
 	LEATHER("leather", 5, 1, 15, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_LEATHER, 0.0f, () -> Ingredient.ofItems(Items.LEATHER)),
-	COPPER("copper", 15, 2, 9, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_COPPER, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.COPPER_INGOTS)),
+	COPPER("copper", 12, 2, 9, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_COPPER, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.COPPER_INGOTS)),
 	IRON("iron", 15, 2, 9, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_IRON, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.IRON_INGOTS)),
 	GOLD("gold", 7, 2, 25, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_GOLD, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.GOLD_INGOTS)),
 	DIAMOND("diamond", 33, 3, 10, AGSoundEvents.ITEM_ARM_GUARD_EQUIP_DIAMOND, 1.0f, () -> Ingredient.ofTag(ConventionalItemTags.DIAMONDS)),
@@ -39,7 +39,7 @@ public enum ArmGuardMaterials implements StringIdentifiable, ArmGuardMaterial {
 
 	@Override
 	public int getDurability() {
-		return 13 * this.durabilityMultiplier;
+		return 15 * this.durabilityMultiplier;
 	}
 
 	@Override

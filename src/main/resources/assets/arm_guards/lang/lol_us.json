@@ -1,0 +1,19 @@
+{
+  "enchantment.arm_guards.conduction": "Zapp",
+  "enchantment.arm_guards.deflect": "boing",
+  "enchantment.arm_guards.poison_barbs": "Puizn spik",
+  "item.arm_guards.copper_arm_guard": "Copurr hand",
+  "item.arm_guards.diamond_arm_guard": "epic sleve",
+  "item.arm_guards.golden_arm_guard": "Shineh arm gard",
+  "item.arm_guards.iron_arm_guard": "cheap arm Coveh",
+  "item.arm_guards.leather_arm_guard": "glove",
+  "item.arm_guards.netherite_arm_guard": "Netherit arm",
+  "item.arm_guards.turtle_arm_guard": "TortL glov",
+  "subtitles.item.arm_guard.equip_copper": "Copurr arm Gard jingles",
+  "subtitles.item.arm_guard.equip_diamond": "epic sleve pings",
+  "subtitles.item.arm_guard.equip_gold": "Shineh arm gard chinks",
+  "subtitles.item.arm_guard.equip_iron": "cheap arm coveh bangs",
+  "subtitles.item.arm_guard.equip_leather": "glove ruztlez",
+  "subtitles.item.arm_guard.equip_netherite": "Netherit arm meows",
+  "subtitles.item.arm_guard.equip_turtle": "TortL glov funks"
+}

@@ -4,6 +4,7 @@
   "package": "moe.nemuri.armguards.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "EnchantmentHelperMixin",
     "EntityMixin",
     "LivingEntityMixin",
     "PiglinBrainMixin",
