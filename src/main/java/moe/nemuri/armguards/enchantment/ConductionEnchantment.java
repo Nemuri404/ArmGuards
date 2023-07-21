@@ -1,7 +1,6 @@
 package moe.nemuri.armguards.enchantment;
 
 import moe.nemuri.armguards.item.ChargeableArmGuardItem;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.random.RandomGenerator;
 

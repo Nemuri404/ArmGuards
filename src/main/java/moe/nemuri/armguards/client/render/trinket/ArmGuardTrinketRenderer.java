@@ -7,7 +7,6 @@ import dev.emi.trinkets.api.client.TrinketRenderer;
 import moe.nemuri.armguards.ArmGuards;
 import moe.nemuri.armguards.client.render.AGRenderLayer;
 import moe.nemuri.armguards.client.render.trinket.model.ArmGuardTrinketModel;
-import moe.nemuri.armguards.item.AGItems;
 import moe.nemuri.armguards.item.ArmGuardItem;
 import moe.nemuri.armguards.item.ChargeableArmGuardItem;
 import moe.nemuri.armguards.item.DyeableArmGuardItem;
@@ -26,7 +25,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.trim.ArmorTrimPermutation;
 import net.minecraft.util.Arm;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.Nullable;
 import org.quiltmc.loader.api.minecraft.ClientOnly;
 
