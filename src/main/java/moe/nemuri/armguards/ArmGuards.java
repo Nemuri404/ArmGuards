@@ -3,7 +3,6 @@ package moe.nemuri.armguards;
 import moe.nemuri.armguards.enchantment.AGEnchantments;
 import moe.nemuri.armguards.event.AGEvents;
 import moe.nemuri.armguards.item.AGItems;
-import moe.nemuri.armguards.sound.AGSoundEvents;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +17,6 @@ public class ArmGuards implements ModInitializer {
 	public void onInitialize(ModContainer mod) {
 		AGItems.init();
 		AGEnchantments.init();
-		AGSoundEvents.init();
 		AGEvents.init();
 	}
 

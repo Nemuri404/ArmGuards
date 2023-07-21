@@ -1,0 +1,12 @@
+{
+  "enchantment.arm_guards.conduction": "傳導",
+  "enchantment.arm_guards.deflect": "反彈投射物",
+  "enchantment.arm_guards.poison_barbs": "中毒荊棘",
+  "item.arm_guards.copper_arm_guard": "銅護臂",
+  "item.arm_guards.diamond_arm_guard": "鑽石護臂",
+  "item.arm_guards.golden_arm_guard": "金護臂",
+  "item.arm_guards.iron_arm_guard": "鐵護臂",
+  "item.arm_guards.leather_arm_guard": "皮革護臂",
+  "item.arm_guards.netherite_arm_guard": "地獄合金護臂",
+  "item.arm_guards.turtle_arm_guard": "海龜殼護臂"
+}
