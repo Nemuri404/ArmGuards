@@ -14,13 +14,6 @@
 <li>Arm Guards can be equipped with <a href="https://modrinth.com/mod/trinkets" rel="noopener nofollow ugc">Trinkets</a>!</li>
 <li>Left Handed support! <i>Equipped Arm Guards automatically switch to your off hand.</i></li>
 <li>Armor Trim support!</li>
-<li>Support for multiple languages!</li>
-</ul>
-<h2>Supported Languages</h2>
-<ul>
-<li>English (United States)</li>
-<li>Japanese</li>
-<li>Simplified Chinese</li>
 </ul>
 
 <h2>FAQ</h2>
