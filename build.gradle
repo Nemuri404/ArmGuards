@@ -15,8 +15,11 @@ repositories {
 		name = "Ladysnake Libs"
 		url = "https://maven.ladysnake.org/releases"
 	}
+	maven {
+		name = 'Ladysnake Mods'
+		url = 'https://ladysnake.jfrog.io/artifactory/mods'
+	}
 	maven { url = "https://jitpack.io" }
-	maven { url = "https://maven.isxander.dev/releases" }
 }
 
 dependencies {
@@ -32,8 +35,6 @@ dependencies {
 	modImplementation libs.trinkets
 
 	modImplementation libs.cardinal.components.base
-
-	modImplementation libs.yet.another.config.lib
 }
 
 

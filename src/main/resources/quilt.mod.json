@@ -34,11 +34,11 @@
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.20"
+				"versions": ">=1.20.1"
 			},
 			{
 				"id": "trinkets",
-				"versions": ">=3.7.0"
+				"versions": ">=3.7.1"
 			}
 		]
 	},

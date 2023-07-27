@@ -1,6 +1,5 @@
 package moe.nemuri.armguards.enchantment;
 
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.util.random.RandomGenerator;
 
 public class DeflectEnchantment extends ArmGuardEnchantment {
@@ -23,11 +22,6 @@ public class DeflectEnchantment extends ArmGuardEnchantment {
 	@Override
 	public int getMaxLevel() {
 		return 3;
-	}
-
-	@Override
-	protected boolean canAccept(Enchantment other) {
-		return super.canAccept(other) && other != AGEnchantments.POISON_BARBS;
 	}
 
 	public static boolean shouldDeflectProjectile(int level, RandomGenerator random) {
