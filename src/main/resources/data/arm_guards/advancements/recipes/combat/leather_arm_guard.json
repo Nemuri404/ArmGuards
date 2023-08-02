@@ -30,5 +30,6 @@
     "recipes": [
       "arm_guards:leather_arm_guard"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

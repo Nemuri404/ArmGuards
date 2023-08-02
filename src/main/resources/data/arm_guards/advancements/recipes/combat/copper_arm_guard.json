@@ -28,5 +28,6 @@
     "recipes": [
       "arm_guards:copper_arm_guard"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

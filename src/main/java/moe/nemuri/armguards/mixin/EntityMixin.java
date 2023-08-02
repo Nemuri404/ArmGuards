@@ -14,11 +14,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class EntityMixin {
 	@Inject(method = "onStruckByLightning", at = @At("TAIL"), cancellable = true)
 	private void armGuards$onStruckByLightning(ServerWorld world, LightningEntity lightning, CallbackInfo ci) {
-		Entity entity = (Entity) (Object) this;
-		if (entity instanceof LivingEntity livingEntity) {
-			AGUtil.chargeArmGuard(AGUtil.getArmGuard(livingEntity), livingEntity);
-			AGUtil.chargeArmGuard(livingEntity.getMainHandStack(), livingEntity);
-			AGUtil.chargeArmGuard(livingEntity.getOffHandStack(), livingEntity);
+		if ((Entity) (Object) this instanceof LivingEntity entity) {
+			AGUtil.chargeArmGuard(AGUtil.getArmGuard(entity), entity);
+			AGUtil.chargeArmGuard(entity.getMainHandStack(), entity);
+			AGUtil.chargeArmGuard(entity.getOffHandStack(), entity);
 		} else {
 			ci.cancel();
 		}

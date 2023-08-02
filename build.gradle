@@ -9,17 +9,16 @@ group = project.maven_group
 repositories {
 	maven {
 		name = "TerraformersMC"
-		url = "https://maven.terraformersmc.com/"
+		url = "https://maven.terraformersmc.com/releases"
+		content {
+			includeGroup "com.terraformersmc"
+			includeGroup "dev.emi"
+		}
 	}
 	maven {
-		name = "Ladysnake Libs"
+		name = "Ladysnake"
 		url = "https://maven.ladysnake.org/releases"
 	}
-	maven {
-		name = 'Ladysnake Mods'
-		url = 'https://ladysnake.jfrog.io/artifactory/mods'
-	}
-	maven { url = "https://jitpack.io" }
 }
 
 dependencies {
@@ -40,6 +39,28 @@ dependencies {
 
 loom {
 	accessWidenerPath = file("src/main/resources/arm_guards.accesswidener")
+
+	runs {
+		datagen {
+			inherit server
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=arm_guards"
+
+			runDir "build/datagen"
+		}
+	}
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDirs += [
+				'src/main/generated'
+			]
+		}
+	}
 }
 
 processResources {

@@ -9,12 +9,12 @@
     "PiglinBrainMixin",
     "PlayerEntityMixin",
     "PlayerInventoryMixin",
-    "SmithingScreenMixin",
     "SmithingTemplateItemMixin"
   ],
   "client": [
     "BufferBuilderStorageMixin",
-    "ItemRendererMixin"
+    "ItemRendererMixin",
+    "SmithingScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

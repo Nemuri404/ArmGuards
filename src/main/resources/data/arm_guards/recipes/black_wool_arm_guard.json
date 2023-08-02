@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "wool_arm_guard",
+  "key": {
+    "#": {
+      "item": "minecraft:black_wool"
+    },
+    "$": {
+      "item": "minecraft:string"
+    },
+    "X": {
+      "item": "minecraft:rabbit_hide"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "#$#"
+  ],
+  "result": {
+    "item": "arm_guards:black_wool_arm_guard"
+  },
+  "show_notification": true
+}

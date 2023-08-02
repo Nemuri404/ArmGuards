@@ -24,9 +24,6 @@ public abstract class LivingEntityMixin extends Entity {
 	@Shadow
 	public abstract boolean isBlocking();
 
-	@Shadow
-	public abstract void remove(RemovalReason reason);
-
 	public LivingEntityMixin(EntityType<? extends LivingEntity> type, World world) {
 		super(type, world);
 	}

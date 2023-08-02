@@ -1,20 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "group": "arm_guard",
   "key": {
     "#": {
-      "item": "minecraft:rabbit_hide"
+      "item": "minecraft:scute"
     },
-    "S": {
+    "$": {
       "item": "minecraft:string"
     },
     "X": {
-      "item": "minecraft:scute"
+      "item": "minecraft:rabbit_hide"
     }
   },
   "pattern": [
     "XXX",
-    "#S#"
+    "#$#"
   ],
   "result": {
     "item": "arm_guards:turtle_arm_guard"

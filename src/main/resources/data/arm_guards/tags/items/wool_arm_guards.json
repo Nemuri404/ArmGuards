@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "arm_guards:black_wool_arm_guard",
+    "arm_guards:blue_wool_arm_guard",
+    "arm_guards:brown_wool_arm_guard",
+    "arm_guards:cyan_wool_arm_guard",
+    "arm_guards:gray_wool_arm_guard",
+    "arm_guards:green_wool_arm_guard",
+    "arm_guards:light_blue_wool_arm_guard",
+    "arm_guards:light_gray_wool_arm_guard",
+    "arm_guards:lime_wool_arm_guard",
+    "arm_guards:magenta_wool_arm_guard",
+    "arm_guards:orange_wool_arm_guard",
+    "arm_guards:pink_wool_arm_guard",
+    "arm_guards:purple_wool_arm_guard",
+    "arm_guards:red_wool_arm_guard",
+    "arm_guards:white_wool_arm_guard",
+    "arm_guards:yellow_wool_arm_guard"
+  ]
+}

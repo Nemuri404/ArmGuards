@@ -17,4 +17,6 @@ public interface ArmGuardMaterial {
 	String getName();
 
 	float getToughness();
+
+	float getKnockbackResistance();
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "arm_guards:netherite_arm_guard_smithing"
+        "recipe": "minecraft:netherite_arm_guard_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,8 @@
   ],
   "rewards": {
     "recipes": [
-      "arm_guards:netherite_arm_guard_smithing"
+      "minecraft:netherite_arm_guard_smithing"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

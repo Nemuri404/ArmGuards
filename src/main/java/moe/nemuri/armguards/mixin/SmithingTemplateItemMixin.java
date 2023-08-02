@@ -1,6 +1,6 @@
 package moe.nemuri.armguards.mixin;
 
-import moe.nemuri.armguards.ArmGuards;
+import moe.nemuri.armguards.util.AGUtil;
 import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +15,7 @@ import java.util.List;
 @Mixin(SmithingTemplateItem.class)
 public abstract class SmithingTemplateItemMixin {
 	@Unique
-	private static final Identifier ARM_GUARD_ICON = ArmGuards.id("item/empty_slot_arm_guard");
+	private static final Identifier ARM_GUARD_ICON = AGUtil.id("item/empty_slot_arm_guard");
 
 	@Inject(method = "getArmorIcons", at = @At("RETURN"), cancellable = true)
 	private static void armGuards$getArmorIcons(CallbackInfoReturnable<List<Identifier>> cir) {

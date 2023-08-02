@@ -7,14 +7,15 @@ import moe.nemuri.armguards.util.ArmGuardMaterial;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.DispenserBehavior;
 import net.minecraft.block.dispenser.ItemDispenserBehavior;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Equippable;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Vanishable;
 import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Hand;
@@ -28,8 +29,8 @@ import net.minecraft.world.event.GameEvent;
 import java.util.List;
 import java.util.UUID;
 
-public class ArmGuardItem extends Item implements Vanishable, Trinket {
-	public static final DispenserBehavior DISPENSER_BEHAVIOR = new ItemDispenserBehavior() {
+public class ArmGuardItem extends Item implements Equippable, Trinket {
+	private static final DispenserBehavior DISPENSER_BEHAVIOR = new ItemDispenserBehavior() {
 		@Override
 		protected ItemStack dispenseSilently(BlockPointer pointer, ItemStack stack) {
 			return ArmGuardItem.dispenseArmGuard(pointer, stack) ? stack : super.dispenseSilently(pointer, stack);
@@ -37,7 +38,8 @@ public class ArmGuardItem extends Item implements Vanishable, Trinket {
 	};
 	private final int protection;
 	private final float toughness;
-	protected final ArmGuardMaterial material;
+	private final float knockbackResistance;
+	private final ArmGuardMaterial material;
 
 	public ArmGuardItem(ArmGuardMaterial material, Settings settings) {
 		super(settings.maxDamageIfAbsent(material.getDurability()));
@@ -45,21 +47,8 @@ public class ArmGuardItem extends Item implements Vanishable, Trinket {
 		this.material = material;
 		this.protection = material.getProtection();
 		this.toughness = material.getToughness();
+		this.knockbackResistance = material.getKnockbackResistance();
 		DispenserBlock.registerBehavior(this, DISPENSER_BEHAVIOR);
-	}
-
-	@Override
-	public int getEnchantability() {
-		return this.material.getEnchantability();
-	}
-
-	public ArmGuardMaterial getMaterial() {
-		return this.material;
-	}
-
-	@Override
-	public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-		return this.material.getRepairIngredient().test(ingredient);
 	}
 
 	@Override
@@ -101,8 +90,9 @@ public class ArmGuardItem extends Item implements Vanishable, Trinket {
 
 	public Multimap<EntityAttribute, EntityAttributeModifier> getModifiers(ItemStack stack, SlotReference slot, LivingEntity entity, UUID uuid) {
 		final var modifiers = Trinket.super.getModifiers(stack, slot, entity, uuid);
-		modifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(uuid, "Armor modifier", this.getProtection(), EntityAttributeModifier.Operation.ADDITION));
-		modifiers.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(uuid, "Armor toughness", this.getToughness(), EntityAttributeModifier.Operation.ADDITION));
+		modifiers.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier(uuid, "Armor modifier", this.protection, EntityAttributeModifier.Operation.ADDITION));
+		modifiers.put(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, new EntityAttributeModifier(uuid, "Armor toughness", this.toughness, EntityAttributeModifier.Operation.ADDITION));
+		modifiers.put(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, new EntityAttributeModifier(uuid, "Armor knockback resistance", this.knockbackResistance, EntityAttributeModifier.Operation.ADDITION));
 		return modifiers;
 	}
 
@@ -114,8 +104,31 @@ public class ArmGuardItem extends Item implements Vanishable, Trinket {
 		return this.toughness;
 	}
 
+	public float getKnockbackResistance() {
+		return this.knockbackResistance;
+	}
+
+	@Override
+	public EquipmentSlot getPreferredSlot() {
+		return null;
+	}
+
 	public SoundEvent getEquipSound() {
 		return this.getMaterial().getEquipSound();
+	}
+
+	@Override
+	public int getEnchantability() {
+		return this.material.getEnchantability();
+	}
+
+	public ArmGuardMaterial getMaterial() {
+		return this.material;
+	}
+
+	@Override
+	public boolean canRepair(ItemStack stack, ItemStack ingredient) {
+		return this.material.getRepairIngredient().test(ingredient);
 	}
 
 	@Override
@@ -124,7 +137,6 @@ public class ArmGuardItem extends Item implements Vanishable, Trinket {
 		String name = slot.inventory().getSlotType().getName();
 		return group.equals("offhand") && name.equals("glove");
 	}
-
 
 	public static boolean dispenseArmGuard(BlockPointer pointer, ItemStack stack) {
 		BlockPos blockPos = pointer.getPos().offset(pointer.getBlockState().get(DispenserBlock.FACING));

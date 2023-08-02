@@ -1,20 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
+  "group": "arm_guard",
   "key": {
     "#": {
-      "item": "minecraft:rabbit_hide"
+      "tag": "c:diamonds"
     },
-    "S": {
+    "$": {
       "item": "minecraft:string"
     },
     "X": {
-      "tag": "c:diamonds"
+      "item": "minecraft:rabbit_hide"
     }
   },
   "pattern": [
     "XXX",
-    "#S#"
+    "#$#"
   ],
   "result": {
     "item": "arm_guards:diamond_arm_guard"

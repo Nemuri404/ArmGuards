@@ -4,12 +4,14 @@ import com.google.common.collect.Maps;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.client.TrinketRenderer;
-import moe.nemuri.armguards.ArmGuards;
 import moe.nemuri.armguards.client.render.AGRenderLayer;
 import moe.nemuri.armguards.client.render.trinket.model.ArmGuardTrinketModel;
 import moe.nemuri.armguards.item.ArmGuardItem;
 import moe.nemuri.armguards.item.ChargeableArmGuardItem;
 import moe.nemuri.armguards.item.DyeableArmGuardItem;
+import moe.nemuri.armguards.item.WoolArmGuardItem;
+import moe.nemuri.armguards.util.AGUtil;
+import moe.nemuri.armguards.util.StackableTrims;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
@@ -21,11 +23,14 @@ import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.trim.ArmorTrimPermutation;
 import net.minecraft.util.Arm;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
+import org.quiltmc.loader.api.QuiltLoader;
 import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 import java.util.Map;
@@ -46,16 +51,48 @@ public class ArmGuardTrinketRenderer implements TrinketRenderer {
 
 			if (item instanceof DyeableArmGuardItem) {
 				int i = ((DyeableArmGuardItem) item).getColor(stack);
-				float r = (float) (i >> 16 & 0xFF) / 255.0F;
-				float g = (float) (i >> 8 & 0xFF) / 255.0F;
-				float b = (float) (i & 0xFF) / 255.0F;
+				float r = (float) (i >> 16 & 0xFF) / 255.0f;
+				float g = (float) (i >> 8 & 0xFF) / 255.0f;
+				float b = (float) (i & 0xFF) / 255.0f;
+				this.render(matrices, provider, light, item, this.getModel(), r, g, b, null);
+				this.render(matrices, provider, light, item, this.getModel(), 1.0f, 1.0f, 1.0f, "overlay");
+			} else if (item instanceof WoolArmGuardItem) {
+				float r;
+				float g;
+				float b;
+				if (stack.hasCustomName() && stack.getName().getString().equals("jeb_")) {
+					int age = entity.age / 25 + entity.getId();
+					int length = DyeColor.values().length;
+					int x = age % length;
+					int y = (age + 1) % length;
+					float f = ((float) (entity.age % 25) + tickDelta) / 25.0f;
+					float[] f1 = SheepEntity.getRgbColor(DyeColor.byId(x));
+					float[] f2 = SheepEntity.getRgbColor(DyeColor.byId(y));
+					r = f1[0] * (1.0f - f) + f2[0] * f;
+					g = f1[1] * (1.0f - f) + f2[1] * f;
+					b = f1[2] * (1.0f - f) + f2[2] * f;
+				} else {
+					float[] f = ((WoolArmGuardItem) item).getColor().getColorComponents();
+					r = f[0];
+					g = f[1];
+					b = f[2];
+				}
 				this.render(matrices, provider, light, item, this.getModel(), r, g, b, null);
 				this.render(matrices, provider, light, item, this.getModel(), 1.0f, 1.0f, 1.0f, "overlay");
 			} else {
 				this.render(matrices, provider, light, item, this.getModel(), 1.0f, 1.0f, 1.0f, null);
 			}
 
-			ArmorTrimPermutation.getPermutationFromStack(entity.getWorld().getRegistryManager(), stack).ifPresent(permutation -> this.renderTrim(matrices, provider, light, permutation, this.getModel()));
+
+			if (QuiltLoader.isModLoaded("stacked_trims")) {
+				StackableTrims.getTrims(entity.getWorld().getRegistryManager(), stack).ifPresent(permutations -> {
+					for (ArmorTrimPermutation permutation : permutations) {
+						this.renderTrim(matrices, provider, light, permutation, this.getModel());
+					}
+				});
+			} else {
+				ArmorTrimPermutation.getPermutationFromStack(entity.getWorld().getRegistryManager(), stack).ifPresent(permutation -> this.renderTrim(matrices, provider, light, permutation, this.getModel()));
+			}
 
 			if (item instanceof ChargeableArmGuardItem) {
 				if (ChargeableArmGuardItem.isCharged(stack)) {
@@ -128,7 +165,7 @@ public class ArmGuardTrinketRenderer implements TrinketRenderer {
 	private Sprite getSprite(ArmorTrimPermutation permutation) {
 		String material = permutation.getMaterial().value().assetName();
 		Identifier id = permutation.getPattern().value().assetId().withPath(path -> "trims/models/arm_guard/" + path + "_" + material);
-		return this.atlas.getSprite(ArmGuards.id(id.toString().replace("minecraft:", "")));
+		return this.atlas.getSprite(AGUtil.id(id.toString().replace("minecraft:", "")));
 	}
 
 	private Identifier getEnergySwirlTexture() {

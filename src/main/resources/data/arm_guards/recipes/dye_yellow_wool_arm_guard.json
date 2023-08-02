@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "wool_arm_guard",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    [
+      {
+        "item": "arm_guards:black_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:blue_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:brown_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:cyan_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:gray_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:green_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:light_blue_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:light_gray_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:lime_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:magenta_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:orange_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:pink_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:purple_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:red_wool_arm_guard"
+      },
+      {
+        "item": "arm_guards:white_wool_arm_guard"
+      }
+    ]
+  ],
+  "result": {
+    "item": "arm_guards:yellow_wool_arm_guard"
+  }
+}

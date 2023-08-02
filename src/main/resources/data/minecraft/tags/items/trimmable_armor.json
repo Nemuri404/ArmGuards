@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#arm_guards:arm_guards"
+    "#arm_guards:trimmable_arm_guards"
   ]
 }

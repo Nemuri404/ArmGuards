@@ -3,6 +3,7 @@ package moe.nemuri.armguards.util;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketInventory;
 import dev.emi.trinkets.api.TrinketsApi;
+import moe.nemuri.armguards.ArmGuards;
 import moe.nemuri.armguards.enchantment.AGEnchantments;
 import moe.nemuri.armguards.enchantment.ConductionEnchantment;
 import moe.nemuri.armguards.item.ArmGuardItem;
@@ -11,8 +12,13 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Identifier;
 
 public class AGUtil {
+	public static Identifier id(String id) {
+		return new Identifier(ArmGuards.MOD_ID, id);
+	}
+
 	public static boolean hasArmGuard(LivingEntity entity) {
 		if (TrinketsApi.getTrinketComponent(entity).isPresent()) {
 			return TrinketsApi.getTrinketComponent(entity).get().isEquipped(stack -> stack.getItem() instanceof ArmGuardItem);
@@ -21,7 +27,7 @@ public class AGUtil {
 	}
 
 	public static ItemStack getArmGuard(LivingEntity entity) {
-		if (hasArmGuard(entity)) {
+		if (AGUtil.hasArmGuard(entity)) {
 			for (var pair : TrinketsApi.getTrinketComponent(entity).get().getEquipped(stack -> stack.getItem() instanceof ArmGuardItem)) {
 				return pair.getRight();
 			}

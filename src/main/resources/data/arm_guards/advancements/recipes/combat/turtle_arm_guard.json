@@ -30,5 +30,6 @@
     "recipes": [
       "arm_guards:turtle_arm_guard"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
