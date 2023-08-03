@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 public enum ArmGuardMaterials implements ArmGuardMaterial {
 	LEATHER("leather", 5, 1, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.LEATHER)),
 	WOOL("wool", 4, 1, 15, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0f, 0.0f, () -> Ingredient.ofTag(ItemTags.WOOL)),
-	COPPER("copper", 12, 2, 9, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0f, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.COPPER_INGOTS)),
+	COPPER("copper", 15, 2, 12, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0f, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.COPPER_INGOTS)),
 	IRON("iron", 15, 2, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.IRON_INGOTS)),
 	GOLD("gold", 7, 2, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.GOLD_INGOTS)),
 	DIAMOND("diamond", 33, 3, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0f, 0.0f, () -> Ingredient.ofTag(ConventionalItemTags.DIAMONDS)),
