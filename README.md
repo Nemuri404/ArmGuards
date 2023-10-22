@@ -20,9 +20,5 @@
 <li><b>Q: Will the mod support Fabric, Forge, or other mod loaders?</b><br>A: No, this mod will only support Quilt.</li>
 <li><b>Q: Will the mod support older version?</b><br>A: No, this mod will only update to the latest versions.</li>
 <li><b>Q: Can I repost this mod?</b><br>A: No, this mod should only be available on Modrinth.</li>
-<li><b>Q: Can I use this mod in a Modpack?</b><br>A: See below for details.</li>
+<li><b>Q: Can I use this mod in a Modpack?</b><br>A: Yes.</li>
 </ul>
-
-<h2>Modpack Usage</h2>
-
-The main reason I don't want this mod to be used in any Modpack is due to the lack luster of features. Once I feel comfortable with the current state of the mod it can used in Modpacks. After version 2.0.0 is released this restriction will no longer apply.
