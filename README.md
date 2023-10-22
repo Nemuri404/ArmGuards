@@ -22,3 +22,6 @@
 <li><b>Q: Can I repost this mod?</b><br>A: No, this mod should only be available on Modrinth.</li>
 <li><b>Q: Can I use this mod in a Modpack?</b><br>A: Yes.</li>
 </ul>
+
+<h2>Note</h2>
+<p>I have decided to stop developing Arm Guards due it based to much on one concept. If anyone wishes to continue development, then please do so.</p>
